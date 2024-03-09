@@ -1,0 +1,709 @@
+/* General CSS */
+
+
+*::before,
+*::after{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+:root{
+    --bg-white:#fff;
+    --bg-dark-clr:#03262c;
+    --primary-txt:#061738;
+    --secondary-txt: #60cd12;
+    --light-clr:#e2f6de;
+    --dark-clr:#03262c;
+    --txt-white:#fff;
+    --txt-gray:#dee2ef;
+    --anchor-clr:#007aff;
+    --primary-font:'Barlow Condensed', sans-serif;
+    --secondary-font:'Roboot', sans-serif
+}
+
+body,
+html{
+    color: var(--primary-txt);
+    font-size: 10px;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+    margin: 0;
+}
+
+h1{
+    font-size: 9rem;
+    line-height: 1.4;
+    font-size: 600;
+    color: var(--primary-txt);
+}
+
+h2{
+    color: var(--primary-txt);
+    font-size: 4.7rem;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: capitalize;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+h3{
+    color: var(--txt-white);
+    font-size: 3.1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--primary-txt);
+}
+
+h5{
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--primary-txt);
+}
+
+p{
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: var(--primary-txt);
+    font-family: var(--secondary-font);
+}
+
+embed,
+iframe,
+img,
+object{
+    max-width: 100%;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+button{
+    text-decoration: none;
+    outline: 0;
+}
+
+li a{
+    color: var(--txt-white);
+}
+
+a:hover,
+button:hover{
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+}
+
+
+
+.main-btn{
+    position: relative;
+    color: var(--bg-white);
+    background: linear-gradient(to right, #0f7404, #5cb917);
+    z-index: 1;
+    overflow: hidden;
+    border: 0.2rem solid var(--bg-white);
+    border-radius: 5rem;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
+    margin-top: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.main.btn:hover{
+    background: var(--bg-white);
+    color: var(--secondary-txt);
+    border: 0.2rem solid var(--secondary-txt);
+}
+
+section{
+    padding: 5rem 0;
+}
+
+.section-title{
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--primary-txt);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.section-subtitle{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--secondary-txt);
+    max-width: 40%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+.about .banner_section,
+.product .banner_section,
+.gallery .banner_section,
+.contact .banner_section{
+    background: url('../Images/banner-slide/top-banner.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 17rem;
+    margin-bottom: 10rem;
+    min-height: auto;
+}
+
+
+
+ /* Navbar Section Start  */
+.header{
+    position: absolute;
+    width: 100%;
+    top: -1rem;
+    left: 0;
+    z-index: 2;
+    position: fixed;
+}
+
+.header .navbar{
+    background: url(../Images/header-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 2rem 5rem;
+}
+
+.header .navbar-brand{
+    width: 7.5rem;
+    margin-top: 0.1rem;
+}
+
+.header .navbar-nav .nav-link{
+    color: var(--txt-white);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    font-family: var(--primary-font);
+}
+
+.header .navbar-nav .nav-link:hover,
+.header .navbar-nav .nav-link.active{
+    color: var(--secondary-txt);
+}
+
+.header .navbar-toggler{
+    color: var(--txt-white);
+    font-size: 2rem;
+    height: 2.7rem;
+    padding: 0;
+}
+
+.header .navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.header .header_right span{
+    color: var(--secondary-txt);
+    display: block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+
+.header .header_right .phone_no{
+    color: var(--txt-white);
+    font-size: 1.6rem;
+}
+
+.header-scrolled{
+    position: fixed;
+    top: -0.4rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    z-index: 999;
+    transition: 0.3s all ease-in-out;
+}
+/* Navbar Section End */
+
+
+
+ /* Banner Section Start */
+ .banner_section{
+    background: url(../Images/banner-slide/Banner-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 90vh;
+ }
+
+ .banner_section .carousel-item{
+    padding: 3rem 0;
+    height: 90vh;
+ }
+
+ .banner_section .carousel-caption{
+    top: 30%;
+    bottom: 0;
+    left: 3%;
+    right: 0;
+    text-align: left;
+    width: 100%;
+ }
+
+ .banner_section .carousel-caption h3{
+    padding: 0.5rem 1.5rem;
+    background: var(--dark-clr);
+    display: inline;
+ }
+
+ .banner_section .carousel-caption p{
+    max-width: 40rem;
+    margin-bottom: 2rem;
+
+ }
+ /* Banner Section End  */
+
+
+
+/* Features Section Start  */
+.feature_section .features-box{
+    background-color: transparent;
+    border: 0.15rem solid var(--light-clr);
+    padding: 8rem 0;
+    transition: all 0.3s;
+}
+
+.feature_section .features-box .text-centre{
+   text-align: center;
+}
+
+.feature_section .features-icon-border{
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0.2rem solid var(--light-clr);
+    padding: 1.3rem;
+    display: inline-block;
+}
+
+.feature_section .features-box .features-icon {
+    height: 6.5rem;
+    width: 6.5rem;
+    background-color: var(--light-clr);
+    border-radius: 50%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.feature_section .features-box .features-icon img{
+    width: 3.7rem;
+
+}
+
+.feature_section .features-box h3{
+    margin-top: 1.5rem;
+    color: var(--primary-txt); 
+}
+
+.feature_section .features-box:hover{
+    background: var(--bg-dark-clr);
+    border-color: var(--bg-dark-clr);
+}
+
+.feature_section .features-box:hover h3{
+    color: var(--txt-white);
+}
+
+.feature_section .features-box:hover .features-icon-border{
+    border-color: var(--secondary-txt);
+}
+/* Features Section End  */
+
+
+
+/* About Section Start    */
+.landing_about_section{
+    background: url(../Images/about/about-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 9rem 0;
+}
+
+.landing_about_section p{
+    color: var(--primary-txt);
+    margin-bottom:2rem;
+}
+/* About Section End  */
+
+
+ 
+/* Product Section Start  */
+.section-subtitle{
+    color: var(--primary-txt);
+}
+
+.landing_product_section .product-card{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border: 0.2rem solid var(--light-clr);
+    padding: 2rem 1rem;
+    transition: all 0.3s;                
+}
+
+.landing_product_section .product-card .product-img{
+    margin-bottom: 7rem;
+    text-align: center;
+}
+
+.landing_product_section .product-card h3{
+    color: var(--primary-txt);
+}
+
+.landing_product_section .product-card span{
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--secondary-txt);
+    margin-right: 0.5rem;
+    text-decoration: line-through;
+    transition: all 0.3s;
+}
+
+.landing_product_section .product-card .product-detail{
+    position: absolute;
+    bottom: -22rem;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 5rem 1rem;
+    background: var(--dark-clr);
+    transition: all 0.5s ease;
+}
+
+.landing_product_section .product-card:hover .product-detail{
+    bottom: 0;
+}
+ /* Product Section End  */
+
+
+
+/* Testimonail Section Start  */
+.testimonial_section{
+    background-color: var(--light-clr);
+    padding-bottom: 8rem;
+}
+
+.testimonial_section .carousel-indicators{
+    bottom: -6rem;
+}
+
+.testimonial_section .carousel-indicators button{
+    background-color: var(--dark-clr);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%
+}
+.testimonial_section .card{
+    background: url('../Images/testimonial/testimonial-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: right;
+    padding: 5rem 5rem 5rem 0;
+    border-radius: 0.5rem .5rem 0;
+    border: 0.1 rem solid transparent;
+}
+
+.testimonial_section .profile-box{
+    padding: 1.875rem;
+    background-color: var(--dark-clr);
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.testimonial_section .profile-box img{
+    border-radius: .625rem 3.125rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.testimonial_section .dosc-box{
+    padding-left: 2.5rem;
+}
+/* Testimonail Section End */
+
+
+
+ /* Gallery Section Start */
+
+ .gallery_section .Section-box{
+    margin-left:8rem;
+ }
+
+.gallery-card {
+    background-color: transparent;
+    width: 38rem;
+    height: 38rem;
+    perspective: 1000px;
+  }
+  
+  .gallery-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: .4rem .4rem .8rem .4rem rgba(0,0,0,0.2);
+  }
+  
+  .gallery-card:hover .gallery-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .gallery-card-front, .gallery-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  .gallery-card-front img{
+    object-fit: cover;
+    margin-top: 4rem;
+  }
+  
+  .gallery-card-front {
+    background-color:var(--bg-white);
+    color: var(--dark-clr);
+  }
+  
+  .gallery-card-back {
+    background-color:var(--secondary-txt);
+    color: var(--bg-white);
+    transform: rotateY(180deg);
+  }
+
+  .title{
+    font-size: 4rem;
+    color: var(--bg-white);
+  }
+
+  .subtitle{
+    font-size: 1.5rem;
+    color: var(--dark-clr);
+  }
+ /* Gallery Section End  */
+
+
+
+
+ /* Footer Section Start  */
+ .footer_wrapper{
+    background: url(../Images/footer-bg/footer_bg.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15rem;
+    padding-bottom: 0rem;
+ }
+
+ .footer_wrapper h5{
+    color: var(--txt-white);
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+ }
+
+ .footer_wrapper ul li{
+    margin-bottom: 0.5rem;
+    list-style: none;
+ }
+
+ .footer_wrapper .company_details{
+    font-size: 1.3rem;
+ }
+
+ .footer_wrapper .contact-infoli ul li a {
+    color: var(--txt-gray);
+    font-size: 1.6rem;
+ }
+
+ .footer_wrapper .contact-infoli ul li a:hover{
+    color: var(--txt-white);
+ }
+
+ .link-widget li a,
+ .footer_wrapper p{
+    color: var(--txt-gray);
+    font-size: 1.4rem;
+    word-spacing: .2rem;
+    padding-left: 1.5rem;
+    position: relative;
+    -webkit-transition: all 0.3s step-end 0s;
+    transition: all 0.3s ease-out;  
+ }
+
+ .footer_wrapper .link-widget li a::before{
+    font-weight: 900;
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.footer_wrapper .link-widget li a:hover{
+    margin-left: .625rem;
+    color: var(--secondary-txt);
+}
+
+.footer_wrapper .social-network a{
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.2rem;
+    margin: .5rem;
+    display: inline-block;
+    border: 0.125rem solid var(--txt-gray);
+    color: var(--txt-gray);
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 50%;
+    -webkit-transition: all 0.3s cubic-bezier(0.625, 0.043, 0.355 1);
+    transition: all 0.3s cubic-bezier(0.625, 0.043, 0.355 1);
+}
+
+.footer_wrapper .social-network a:hover{
+    background-color: var(--secondary-txt);
+    border-color: var(--secondary-txt);
+    color: var(--txt-white);
+    box-shadow: 0 0.625rem .9375rem 0 rgb(0 0 0 / 10%);
+    transform: translateY(-.5rem);   
+}
+
+.footer_wrapper .form-contrl{
+    font-size: 2rem;
+    color: var(--txt-white);
+}
+
+.footer_wrapper .form-contrl:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: var(--secondary-txt); 
+}
+
+.footer_wrapper .copyright-section{
+    text-align: center;
+    padding-bottom: 2rem;
+}
+ /* Footer Section End  */
+
+
+
+
+
+
+ /* ============ About page CSS ============== */
+
+ .about .about-details p{
+    color: var(--primary-txt);
+    text-align: justify;
+ }
+ 
+
+ /* ============ Product page CSS ============== */
+
+.product .product-detail p{
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+
+/* ============ Contact page CSS ============== */
+
+.contact_section .contact-form{
+    background-color: var(--light-clr);
+    padding: 5rem;
+    box-shadow: 0 0.2rem 1.5rem rgb(0 0 0 / 4%);
+}
+
+.contact_section .contact-form .form-control:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.contact_section .contact-form .form-control::placeholder{
+    color: var(--primary-txt);
+}
+
+.contact_section .contact-form .form-control{
+    padding: 1rem 1.5rem;
+    border-radius: 0rem;
+    border: 0.1rem solid var(--secondary-txt);
+    color: var(--primary-txt);
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--secondary-font);
+}
+
+.contact_section .contact-form textarea{
+    min-height: 15rem;
+}
+
+.contact_section .contact-form .info-box li{
+    padding-left: 7rem;
+    padding-bottom: 3.5rem;
+    margin-bottom: 2.9rem;
+}
+
+.contact_section .contact-form .info-box li p{
+    margin-top: -5rem;
+}
+
+.contact_section .contact-form .content-box .fa-phone,
+.contact_section .contact-form .content-box .fa-envelope{
+    font-size: 4rem;
+    margin-left: -8rem;
+    top: 1.5rem;
+    line-height: 4rem;
+    color:var(--primary-txt);
+}
+
+
